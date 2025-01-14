@@ -1,0 +1,157 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+---
+
+<MainLayout
+  title="Formular - Betaling"
+  ogtitle="Betaling - Vinens Essens"
+  description="Betalingssiden til Vinens Essens"
+  ogdescription="Betalingssiden til virksomheden Vinens Essens"
+>
+  <section class="max-w-7xl mx-auto md:p-0 p-8">
+    <section class="md:pt-desktop-top pt-mobil-top md:pb-desktop-bottom pb-mobil-bottom">
+      <section class="grid md:grid-cols-12 gap-4">
+        <section class="bg-neutral-900 col-span-8 md:col-start-3">
+          <section class="grid grid-cols-6">
+            <span class="bg-red-800 h-3"></span>
+            <span class="bg-red-800 h-3"></span>
+            <span class="bg-red-800 h-3"></span>
+            <span class="bg-red-800 h-3"></span>
+            <span class="bg-red-800 h-3"></span>
+            <span class="bg-red-800 h-3"></span>
+          </section>
+          <section class="md:p-12 p-8">
+            <!------------------------------ Kunde og leverings oplysninger ------------------------------>
+
+            <h1 class="md:text-h3-desktop text-h3-mobile font-display font-bold pb-10">
+              <a class="pr-3 inline align-top" href="/formular_mitid"><img class="h-6 inline" src="/tilbage.svg" alt="Tilbageknap" /></a>Kunde og
+              leverings oplysninger
+            </h1>
+
+            <section class="md:pb-desktop-bottom pb-mobil-bottom">
+              <section class="bg-neutral-50">
+                <!------ Sektion 1 ------>
+                <section class="p-8">
+                  <p class="text-neutral-950 font-regular">Forventet levering d. 15/1 2025</p>
+                  <p class="text-neutral-950 font-regular">Leveres til pakkeboks (Gratis)</p>
+                </section>
+                <section class="flex justify-center">
+                  <hr class="border-t-2 border-red-800 w-[80%]" />
+                </section>
+                <!------ Sektion 2 ------>
+                <section class="p-8 grid md:grid-cols-2">
+                  <div>
+                    <p class="text-neutral-950 font-bold">Leveringsadresse</p>
+                    <p class="text-neutral-950 font-regular">Sofie Hansen</p>
+                    <p class="text-neutral-950 font-regular">Guldbergsgade 29N</p>
+                    <p class="text-neutral-950 font-regular">2200 København N</p>
+                    <p class="text-neutral-950 font-regular">kea@kea.dk</p>
+                  </div>
+                  <div class="flex md:justify-end justify-start">
+                    <a class="text-red-700 font-bold" href="/formular_oplysninger">Rediger</a>
+                  </div>
+                </section>
+                <section class="flex justify-center">
+                  <hr class="border-t-2 border-red-800 w-[80%]" />
+                </section>
+                <!------ Sektion 3 ------>
+                <section class="p-8 grid md:grid-cols-2">
+                  <div>
+                    <p class="text-neutral-950 font-bold">Faktueringsadresse</p>
+                    <p class="text-neutral-950 font-regular">Sofie Hansen</p>
+                    <p class="text-neutral-950 font-regular">Guldbergsgade 29N</p>
+                    <p class="text-neutral-950 font-regular">2200 København N</p>
+                    <p class="text-neutral-950 font-regular">kea@kea.dk</p>
+                  </div>
+                  <div class="flex md:justify-end justify-start">
+                    <a class="text-red-700 font-bold" href="/formular_oplysninger">Rediger</a>
+                  </div>
+                </section>
+              </section>
+            </section>
+
+            <!------------------------------ Betaling ------------------------------>
+            <h1 class="md:text-h3-desktop text-h3-mobile font-display font-bold pb-10">Betaling</h1>
+
+            <section class="bg-neutral-50">
+              <!------ Sektion 1 ------>
+              <section class="has-[:checked]:border-red-800 has-[:checked]:border-3 p-8 grid grid-cols-6 gap-gap">
+                <div class="col-span-1 col-start-1 content-center pr-5">
+                  <div class="flex items-center">
+                    <input
+                      id="default-radio-1"
+                      checked="checked"
+                      type="radio"
+                      value=""
+                      name="default-radio"
+                      class="md:w-5 md:h-5 w-6 h-6 bg-neutral-200 focus:ring-red-800 focus:ring-2 border-none"
+                    />
+                  </div>
+                </div>
+                <div class="md:col-span-3 col-span-5 col-start-2 content-center">
+                  <p class="text-neutral-950 font-bold">VISA-dankort, VISA, MasterCard, Eurocard</p>
+                  <p class="text-neutral-950 font-regular">Kortgebyr: gratis</p>
+                </div>
+                <div class="md:col-span-2 col-span-4 md:col-start-5 col-start-2">
+                  <div class="grid grid-cols-3 gap-2 pt-5">
+                    <div class="content-center">
+                      <img class="w-10" src="/dk.webp" alt="dk" />
+                    </div>
+                    <div class="content-center">
+                      <img class="w-10" src="/visa.webp" alt="visa" />
+                    </div>
+                    <div class="content-center">
+                      <img class="w-10" src="/mastercard.webp" alt="mastercard" />
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <!------ Sektion 2 ------>
+              <section class="has-[:checked]:border-red-800 has-[:checked]:border-3 p-8 grid grid-cols-6 gap-gap">
+                <div class="col-span-1 col-start-1 content-center pr-5">
+                  <div class="flex items-center">
+                    <input
+                      id="default-radio-1"
+                      type="radio"
+                      value=""
+                      name="default-radio"
+                      class="md:w-5 md:h-5 w-6 h-6 bg-neutral-200 focus:ring-red-800 focus:ring-2 border-none"
+                    />
+                  </div>
+                </div>
+                <div class="md:col-span-3 col-span-5 col-start-2 content-center">
+                  <p class="text-neutral-950 font-bold">MobilePay</p>
+                  <p class="text-neutral-950 font-regular">Kræver MobilePay app</p>
+                </div>
+                <div class="md:col-span-2 col-span-4 md:col-start-5 col-start-2">
+                  <div class="grid grid-cols-3 gap-2 pt-5">
+                    <div class="content-center col-start-2">
+                      <img class="w-10" src="/mobilpay.webp" alt="Mobilepay" />
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </section>
+            <div class="flex items-baseline pt-5">
+              <input type="checkbox" id="checkbox" name="checkbox" value="checkbox" class="bg-neutral-5 border-0" />
+              <label class="md:text-p-desktop text-p-mobile font-lato font-light text-neutral-50 pl-2" for="checkbox"
+                >Bekræft vores <span class="underline">handelsbetingelser</span><span class="text-red-600">*</span></label
+              >
+            </div>
+            <div class="flex justify-center pt-10">
+              <a href="/formular_tak">
+                <Button variant="primary" size="small">Betal</Button>
+              </a>
+            </div>
+          </section>
+        </section>
+      </section>
+      <section class="pt-10 flex justify-center">
+        <hr class="border-t-2 border-red-800 w-28" />
+      </section>
+    </section>
+  </section>
+</MainLayout>

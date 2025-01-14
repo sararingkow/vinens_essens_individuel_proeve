@@ -1,0 +1,146 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout
+  title="Om os"
+  ogtitle="Om os - Vinens Essens"
+  description="Om os-siden til Vinens Essens"
+  ogdescription="Om os-siden til virksomheden Vinens Essens"
+>
+  <div class="relative flex justify-center items-center">
+    <img src="/hero_about.webp" alt="En flaske med vin, der bliver holdt oppe" class="w-full h-[500px] object-cover" />
+    <!-- Dark overlay -->
+    <div class="md:h-full absolute inset-0 bg-neutral-950 bg-opacity-35 z-[20]"></div>
+  </div>
+  <div class="md:pl-0 pl-[7%] relative max-w-7xl mx-auto z-[30]">
+    <div id="Left-overskrift">
+      <div class="absolute top-[clamp(40vh, 50vh, 60vh)] w-[fit-content] transform -translate-y-1/2 overflow-hidden">
+        <h1 class="display text-neutral-50 w-[fit-content]">OM OS</h1>
+      </div>
+    </div>
+  </div>
+  <section class="max-w-7xl mx-auto md:p-0 p-8">
+    <section id="Left" class="grid md:grid-cols-12 gap-20 pb-mobil-bottom md:pb-desktop-bottom pt-mobil-top md:pt-desktop-top items-center">
+      <!-- Image section -->
+      <div class="md:col-span-5 flex content-center">
+        <img
+          src="/about1.webp"
+          alt="Billede af et ægtepar med manden som har sin ene arm over kvindens skulder"
+          class="w-[442px] h-[442px] object-cover"
+        />
+      </div>
+      <!-- Text section -->
+      <div class="md:col-span-7">
+        <h2>Hvem er vi?</h2>
+        <hr class="my-4 border-t-2 border-red-800 w-28" />
+        <p class="mt-8">
+          Vi er et passioneret ægtepar, der deler en kærlighed til vin og de oplevelser, den bringer. Vores rejse begyndte med nysgerrighed og har
+          ført os til vingårde i Toscana, Bourgogne og andre vinregioner. Her har vi opnået en dybere forståelse for vinens mangfoldighed og den
+          passion, der ligger bag hver flaske.
+          <br /><br />
+          Når vi udvælger vin, søger vi efter flasker, der fortæller en historie. Vi leder efter kvalitet, men også noget unikt&mdash; en særlig drue,
+          en tradition eller en unik produktionsmetode. Vi smager hver vin personligt og vurderer dens balance, kompleksitet og evne til at skabe en mindeværdig
+          oplevelse.
+          <br /><br />
+          For os handler det ikke bare om vin, men om at skabe forbindelser&mdash; mellem vinens oprindelse og din oplevelse. Vores mission er at bringe
+          det bedste fra vinens verden hjem til dig&mdash; altid nøje udvalgt, elegant og tilgængeligt.
+        </p>
+      </div>
+    </section>
+    <section id="Right" class="grid md:grid-cols-12 gap-20 pb-mobil-bottom md:pb-desktop-bottom items-center">
+      <!-- Text section -->
+      <div class="md:col-span-7">
+        <h2>Overraskelse <br class="hidden md:block" />hver måned</h2>
+        <hr class="my-4 border-t-2 border-red-800 w-28" />
+        <p class="mt-8">
+          Vi ønsker at dele vores passion for vin på en måde, der både overrasker og inspirerer. Hver måned sammensætter vi en unik smagsoplevelse,
+          hvor vi trækker på vores viden og erfaring. Vi finder vine, der fortæller en historie, introducerer nye smagsnuancer eller fremhæver særlige
+          traditioner.
+          <br /><br />
+          Hver overraskelse er nøje udvalgt for at give dig noget særligt – måske en vin fra en familieejet vingård, vi selv har besøgt, eller en flaske
+          med en spændende baggrundshistorie. Vi stræber efter at finde en perfekt balance mellem klassikere og uventede favoritter.
+          <br /><br />
+          Denne månedlige oplevelse er skabt til dig, der ønsker at udforske vinens mangfoldighed, uden at det føles kompliceret. En elegant og personlig
+          gave, der kan nydes alene eller deles med dem, du holder af. For os handler det om mere end vin&mdash; det handler om at dele gode smagsoplevelser.
+        </p>
+      </div>
+      <!-- Image section -->
+      <div class="md:col-span-5 flex content-center">
+        <img src="/about2.webp" alt="Forskellige flasker med vin" class="object-cover" />
+      </div>
+    </section>
+
+    <div class="max-w-7xl pb-mobil-bottom md:pb-desktop-bottom">
+      <!-- Mission & Vision Section -->
+      <div class="sticky top-1/4 mangeelementerinview">
+        <div class="grid md:grid-cols-2 grid-cols-1 justify-center">
+          <div class="mangeelementer1 mx-auto bg-neutral-800 text-neutral-50 p-8 order-1 md:order-none grid content-center">
+            <h3 class="mb-4">Mission & vision</h3>
+            <p>
+              Hos Vinens Essens ønsker vi at gøre vin til en personlig og uforglemmelig oplevelse. Vi tilbyder vine af høj kvalitet, der vækker
+              nysgerrighed og glæde, samtidig med at vi holder det enkelt og tilgængeligt. Vores vision er at skabe en vinoplevelse, som kan nydes af
+              alle, uanset viden eller erfaring, og at gøre vin mere tilgængeligt uden at gå på kompromis med elegance og kvalitet.
+            </p>
+          </div>
+          <div class="w-fit order-2 md:order-none mangeelementer2">
+            <img src="/values1.webp" alt="Vinmarker" class="object-cover" />
+          </div>
+        </div>
+
+        <!-- Values Section -->
+        <div class="grid md:grid-cols-2 grid-cols-1">
+          <div class="w-fit order-2 md:order-1 mangeelementer3">
+            <img src="/values2.webp" alt="En vinkælder, med rækker af forskellige vine" class="w-full object-cover" />
+          </div>
+          <div class="mx-auto bg-neutral-800 text-neutral-50 p-8 order-1 md:order-2 mangeelementer4 grid content-center">
+            <h3 class="mb-4">Værdier</h3>
+            <p>
+              Vi brænder for vin og deler gerne vores glæde med vores kunder. Hver flaske vi udvælger, lever op til vores høje standarder for kvalitet
+              og smag. Vi stræber efter at give en personlig og imødekommende service, hvor elegance og eksklusivitet kombineres med enkelhed og
+              tilgængelighed, så alle kan nyde vinens mange nuancer.
+            </p>
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <hr class="my-12 border-t-2 border-red-800 w-28" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    import { inView, animate } from "motion";
+
+    /* Mange elementer der animerer ind */
+    inView(".mangeelementerinview", () => {
+      animate(".mangeelementer1", { x: [-2000, 0], y: [-50, 0] }, { duration: 1 });
+      animate(".mangeelementer2", { x: [-1500, 0], y: [-100, 0] }, { duration: 3 });
+      animate(".mangeelementer3", { x: [-1000, 0], y: [-150, 0] }, { duration: 3 });
+      animate(".mangeelementer4", { x: [1750, 0] }, { duration: 2 });
+
+      return () => {
+        animate(".mangeelementer1", { x: [-2000, 0], y: [-50, 0] }, { duration: 1 });
+        animate(".mangeelementer2", { x: [-1500, 0], y: [-100, 0] }, { duration: 3 });
+        animate(".mangeelementer3", { x: [-1000, 0], y: [-150, 0] }, { duration: 3 });
+        animate(".mangeelementer4", { x: [1750, 0] }, { duration: 2 });
+      };
+    });
+
+    /* inView Animations */
+    const elementmedanimation1 = document.querySelector("#Left");
+    inView(elementmedanimation1, () => {
+      elementmedanimation1.classList.add("animate__animated", "animate__fadeInLeft");
+    });
+
+    const elementmedanimation2 = document.querySelector("#Left-overskrift");
+    inView(elementmedanimation2, () => {
+      elementmedanimation2.classList.add("animate__animated", "animate__fadeInLeft");
+    });
+
+    const elementmedanimation3 = document.querySelector("#Right");
+    inView(elementmedanimation3, () => {
+      elementmedanimation3.classList.add("animate__animated", "animate__fadeInRight");
+    });
+  </script>
+</MainLayout>

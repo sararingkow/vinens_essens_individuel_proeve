@@ -1,0 +1,117 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import ListeviewCard from "../components/ListeviewCard.astro";
+
+const cards = [
+  {
+    position: 1,
+    image: "/red_card1.webp",
+    label: "6 stk",
+    extralabel: "Mest populær!",
+    title: "Rødvinskasse",
+    description: "Seks rødvine, der lader dig udforske forskellige druesorter og unikke vinområder.",
+    price: "699 DKK/mdr.",
+    second_description: "(Værdi af 1.500 DKK)",
+    buttonText: "Læs mere",
+  },
+  {
+    image: "/white_card1.webp",
+    label: "6 stk",
+    title: "Hvidvinskasse",
+    description: "Tre nøje udvalgte hvidvine, der giver en balance af friskhed, dybde og finesse.",
+    price: "699 DKK/mdr.",
+    second_description: "(Værdi af 1.500 DKK)",
+    buttonText: "Læs mere",
+  },
+  {
+    image: "/mixed_card1.webp",
+    label: "6 stk",
+    title: "Blandet vinkasse",
+    description: "En eksklusiv samling af rød- og hvidvine, der spænder fra kraftfulde til lette smagsnuancer.",
+    price: "699 DKK/mdr.",
+    second_description: "(Værdi af 1.500 DKK)",
+    buttonText: "Læs mere",
+  },
+  {
+    image: "/red_card2.webp",
+    label: "3 stk",
+    title: "Rødvinskasse",
+    description: "Tre rødvine, der bringer smagen af verdens mest spændende vinregioner til dit glas.",
+    price: "349 DKK/mdr.",
+    second_description: "(Værdi af 900 DKK)",
+    buttonText: "Læs mere",
+  },
+  {
+    image: "/white_card2.webp",
+    label: "3 stk",
+    title: "Hvidvinskasse",
+    description: "Tre hvidvine, der kombinerer sprødhed, raffinement og et strejf af kompleksitet.",
+    price: "349 DKK/mdr.",
+    second_description: "(Værdi af 900 DKK)",
+    buttonText: "Læs mere",
+  },
+  {
+    image: "/mixed_card2.webp",
+    label: "3 stk",
+    title: "Blandet vinkasse",
+    description: "En kollektion af rød- og hvidvine, der tager dig fra intense til elegante smagsoplevelser.",
+    price: "349 DKK/mdr.",
+    second_description: "(Værdi af 900 DKK)",
+    buttonText: "Læs mere",
+  },
+];
+---
+
+<MainLayout
+  title="Vinkasser"
+  ogtitle="Vinkasser - Vinens Essens"
+  description="Overview-siden til Vinens Essens"
+  ogdescription="Overview-siden til virksomheden Vinens Essens"
+>
+  <div class="relative flex justify-center items-center">
+    <img src="/hero_listview.webp" alt="En række med portvine, på en reol" class="w-full h-[500px] object-cover" />
+    <!-- Dark overlay -->
+    <div class="h-full absolute inset-0 bg-neutral-950 bg-opacity-35 z-[20]"></div>
+  </div>
+  <div class="md:pl-0 pb-7 md:pb-0 pl-[7%] relative max-w-7xl mx-auto z-[30]">
+    <div id="Left-overskrift">
+      <div class="absolute top-[clamp(40vh, 50vh, 60vh)] w-[fit-content] transform -translate-y-1/2 overflow-hidden">
+        <h1 class="display text-neutral-50 w-[fit-content]">VIN&shy;KASSER</h1>
+      </div>
+    </div>
+  </div>
+
+  <section class="max-w-7xl mx-auto md:p-0 p-8">
+    <section
+      class="flex flex-col justify-center items-center lg:grid lg:grid-cols-12 gap-gap
+         pb-mobil-bottom pt-mobil-top md:pb-desktop-bottom md:pt-desktop-top"
+    >
+      {/* Map over the cards */}
+      {
+        cards.map((card) => (
+          <ListeviewCard
+            key={card.position}
+            image={card.image}
+            label={card.label}
+            extralabel={card.position === 1 ? card.extralabel : null}
+            title={card.title}
+            description={card.description}
+            price={card.price}
+            second_description={card.second_description}
+            buttonText={card.buttonText}
+          />
+        ))
+      }
+    </section>
+  </section>
+
+  <script>
+    import { inView, animate } from "motion";
+
+    /* inView Animations */
+    const elementmedanimation1 = document.querySelector("#Left-overskrift");
+    inView(elementmedanimation1, () => {
+      elementmedanimation1.classList.add("animate__animated", "animate__fadeInLeft");
+    });
+  </script>
+</MainLayout>

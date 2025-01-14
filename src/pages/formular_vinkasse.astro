@@ -1,0 +1,65 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+---
+
+<MainLayout
+  title="Formular - Vælg din vinkasse"
+  ogtitle="Vælg din vinkasse - Vinens Essens"
+  description="Vinkasse-siden til Vinens Essens"
+  ogdescription="Vinkasse-siden til virksomheden Vinens Essens"
+>
+  <section class="max-w-7xl mx-auto lg:p-0 p-8">
+    <section class="lg:pt-desktop-top pt-mobil-top lg:pb-desktop-bottom pb-mobil-bottom">
+      <section class="grid lg:grid-cols-12 gap-gap">
+        <section class="bg-neutral-900 col-span-8 lg:col-start-3">
+          <section class="grid grid-cols-6">
+            <span class="bg-red-800 h-3"></span>
+            <span class="bg-neutral-50 h-3"></span>
+            <span class="bg-neutral-50 h-3"></span>
+            <span class="bg-neutral-50 h-3"></span>
+            <span class="bg-neutral-50 h-3"></span>
+            <span class="bg-neutral-50 h-3"></span>
+          </section>
+          <section class="lg:p-12 p-8">
+            <p class="pb-3">Månedligt abonnement</p>
+            <h1 class="lg:text-h3-desktop text-h3-mobile font-display font-bold pb-10">Vælg din vinkasse</h1>
+
+            <section class="grid lg:grid-cols-3 md:grid-cols-2 gap-gap">
+              <section class="col-span-1 flex flex-col items-center justify-center">
+                <div class="pb-5">
+                  <img class="h-80" src="/roedvinspakke.svg" alt="Rødvinspakke" />
+                </div>
+                <a class="pt-5" href="/formular_antal">
+                  <Button variant="primary" size="small">Rødvinskassen</Button>
+                </a>
+              </section>
+
+              <section class="col-span-1 flex flex-col items-center justify-center">
+                <div class="md:pt-0 pt-16 pb-5">
+                  <img class="h-80" src="/hvidvinspakke.svg" alt="Hvidvinspakke" />
+                </div>
+                <a class="pt-5" href="/formular_antal">
+                  <Button variant="primary" size="small">Hvidvinskassen</Button>
+                </a>
+              </section>
+
+              <section class="col-span-1 flex flex-col items-center justify-center">
+                <div class="md:pt-0 pt-16 pb-5">
+                  <img class="h-80" src="/bladet_pakke.svg" alt="Bladet vinpakke" />
+                </div>
+                <a class="pt-5" href="/formular_antal">
+                  <Button variant="primary" size="small">Blandet vinkasse</Button>
+                </a>
+              </section>
+            </section>
+          </section>
+        </section>
+      </section>
+      <section class="pt-10 flex justify-center">
+        <hr class="border-t-2 border-red-800 w-28" />
+      </section>
+    </section>
+  </section>
+</MainLayout>

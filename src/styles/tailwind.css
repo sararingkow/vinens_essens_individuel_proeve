@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .display {
+    @apply font-display font-semibold text-neutral-50 uppercase;
+    @apply text-display-mobile;
+  }
+
+  @screen md {
+    .display {
+      @apply text-display-desktop;
+    }
+  }
+
+  h1 {
+    @apply font-display font-semibold text-neutral-50;
+    @apply text-h1-mobile;
+  }
+
+  @screen md {
+    h1 {
+      @apply text-h1-desktop;
+    }
+  }
+
+
+
+  h2 {
+    @apply font-display font-semibold text-neutral-50;
+    @apply text-h2-mobile;
+  }
+
+  @screen md {
+    h2 {
+      @apply text-h2-desktop;
+    }
+  }
+
+
+
+  h3 {
+    @apply font-display font-bold text-neutral-50;
+    @apply text-h3-mobile;
+  }
+
+  @screen md {
+    h3 {
+      @apply text-h3-desktop;
+    }
+  }
+
+
+
+  h4 {
+    @apply font-display font-bold text-neutral-50;
+    @apply text-h4-mobile;
+  }
+
+  @screen md {
+    h4 {
+      @apply text-h4-desktop;
+    }
+  }
+
+
+
+  p {
+    @apply font-lato font-light text-neutral-50;
+    @apply text-p-mobile;
+  }
+
+  @screen md {
+    p {
+      @apply text-p-desktop;
+    }
+  }
+
+
+
+  a, li {
+    @apply font-lato font-regular text-red-700;
+    @apply text-a-mobile;
+  }
+
+  @screen md {
+    a, li {
+      @apply text-a-desktop;
+    }
+  }
+
+
+}

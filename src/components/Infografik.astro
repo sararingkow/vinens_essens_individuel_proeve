@@ -1,0 +1,81 @@
+---
+
+---
+
+<section class="grid md:grid-cols-12 gap-gap md:pb-desktop-bottom pb-mobil-bottom">
+    <!-- Step 1 -->
+    <section class="fade1 col-span-3 flex flex-col items-center text-center md:pb-0 pb-5">
+        <img class="md:h-40 h-32 mb-4" src="/vaelg_red.svg" alt="En computermus der vælger vinkasse" />
+        <div>
+            <h1 class="md:text-h4-desktop text-h4-mobile font-display font-bold pb-3">1. Vælg din pakke</h1>
+            <p>Find den pakke, der passer bedst til dig, og glæd dig til spændende vinoplevelser hver måned.</p>
+        </div>
+    </section>
+
+    <!-- Step 2 -->
+    <section class="fade2 col-span-3 flex flex-col items-center text-center md:pb-0 pb-5">
+        <img class="md:h-40 h-32 mb-4" src="/udvaelger_red.svg" alt="En hånd der vælger vin" />
+        <div>
+            <h1 class="md:text-h4-desktop text-h4-mobile font-display font-bold pb-3">2. Vi udvælger vinen</h1>
+            <p>Hver måned håndplukker vi 3-6 vine af høj kvalitet, så du kan opleve nye smagsoplevelser.</p>
+        </div>
+    </section>
+
+    <!-- Step 3 -->
+    <section class="fade3 col-span-3 flex flex-col items-center text-center md:pb-0 pb-5">
+        <img class="md:h-40 h-32 mb-4" src="/levering_red.svg" alt="En varervong der levere" />
+        <div>
+            <h1 class="md:text-h4-desktop text-h4-mobile font-display font-bold pb-3">3. Gratis levering</h1>
+            <p>Alle vores abonnenter får altid gratis levering – nemt og bekvemt.</p>
+        </div>
+    </section>
+
+    <!-- Step 4 -->
+    <section class="fade4 col-span-3 flex flex-col items-center text-center">
+        <img class="md:h-40 h-32 mb-4" src="/nyd_red.svg" alt="To vinglas der skåler" />
+        <div>
+            <h1 class="md:text-h4-desktop text-h4-mobile font-display font-bold pb-3">4. Nyd din vin</h1>
+            <p>Skænk op, læn dig tilbage, og nyd de unikke smagsnuancer i hver flaske.</p>
+        </div>
+    </section>
+</section>
+
+<style>
+    .delay-1 {
+        animation-delay: 0.5s;
+    }
+    .delay-2 {
+        animation-delay: 1s;
+    }
+    .delay-3 {
+        animation-delay: 1.5s;
+    }
+    .delay-4 {
+        animation-delay: 2s;
+    }
+</style>
+
+<script>
+    import { inView } from "motion";
+
+    /* inView Animations */
+    const elementmedanimation1 = document.querySelector(".fade1");
+    inView(elementmedanimation1, () => {
+        elementmedanimation1.classList.add("animate__animated", "animate__fadeIn", "delay-1");
+    });
+
+    const elementmedanimation2 = document.querySelector(".fade2");
+    inView(elementmedanimation2, () => {
+        elementmedanimation2.classList.add("animate__animated", "animate__fadeIn", "delay-2");
+    });
+
+    const elementmedanimation3 = document.querySelector(".fade3");
+    inView(elementmedanimation3, () => {
+        elementmedanimation3.classList.add("animate__animated", "animate__fadeIn", "delay-3");
+    });
+
+    const elementmedanimation4 = document.querySelector(".fade4");
+    inView(elementmedanimation4, () => {
+        elementmedanimation4.classList.add("animate__animated", "animate__fadeIn", "delay-4");
+    });
+</script>

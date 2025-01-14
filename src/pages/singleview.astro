@@ -1,0 +1,95 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+import Infografik from "../components/Infografik.astro";
+---
+
+<MainLayout
+  title="Blandet vinkasse"
+  ogtitle="Blandet vinkasse - Vinens Essens"
+  description="Singleview-siden til Vinens Essens"
+  ogdescription="Singleview-siden til virksomheden Vinens Essens"
+>
+  <section class="max-w-7xl mx-auto md:p-0 p-8">
+    <!------------------------------ Hero ------------------------------>
+    <section id="section1" class="grid md:grid-cols-12 md:pt-desktop-top pt-mobil-top md:pb-desktop-bottom pb-mobil-bottom">
+      <div class="col-span-6">
+        <img class="w-full h-full object-cover" src="/red_white.webp" alt="rødvin og hvidvin i vinglas" />
+      </div>
+      <section class="col-span-6 bg-neutral-900">
+        <section class="h-full">
+          <section class="py-10 p-10">
+            <h1 class="md:text-h2-desktop text-h2-mobile font-display font-semibold">Blandet vinkasse – 3 flasker</h1>
+            <br />
+            <hr class="border-t-2 border-red-800 w-28" />
+            <br />
+            <p>Forkæl dig selv med en månedlig vinkasse, hvor du kan opleve nøje udvalgte vine fra nogle af verdens mest anerkendte vinområder.</p>
+            <br />
+            <p>Hver måned modtager du tre forskellige flasker, der tilsammen giver dig nye smagsoplevelser og inspiration til vinens verden.</p>
+            <br />
+            <p class="text-neutral-300">
+              Bestil inden d. 8. i måneden for levering samme måned. Bestiller du efter denne dato, sender vi vinkassen fra næste måned. Ingen binding
+              – altid med gratis levering.
+            </p>
+            <br />
+            <h2 class="md:text-h4-desktop text-h4-mobile font-display font-bold">349 DKK/mdr. – inkl. levering</h2>
+            <br />
+            <a href="/formular_oplysninger"><Button variant="primary" size="small">Bestil vinkassen</Button></a>
+          </section>
+        </section>
+      </section>
+    </section>
+
+    <!------------------------------ Infografik ------------------------------>
+    <Infografik />
+
+    <!------------------------------ Tidligere vinkasse ------------------------------>
+    <section class="grid md:grid-cols-12 gap-gap md:pb-10 pb-5">
+      <section class="col-span-6">
+        <h1 class="md:text-h2-desktop text-h2-mobile font-display font-semibold">Tidligere vinkasse</h1>
+        <br />
+        <p>
+          Hver måned sammensætter vi unikke vinkasser med nøje udvalgte vine af høj kvalitet til en samlet værdi på ca. 900 DKK. Her kan du få et
+          indblik i, hvad en af vores tidligere vinkasser har indeholdt.
+        </p>
+      </section>
+    </section>
+    <section class="grid md:grid-cols-12 gap-gap md:pb-desktop-bottom pb-mobil-bottom">
+      <section class="col-span-4 relative hover:scale-105 transition duration-300 ease-in-out">
+        <div class="relative w-full h-[28rem]">
+          <img src="/tidligere_1.webp" alt="Xavier Vignon Lirac" class="w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-neutral-950 bg-opacity-35"></div>
+          <h2 class="absolute bottom-0 left-0 right-0 text-center p-4 md:text-h3-desktop text-h3-mobile font-display font-bold">
+            Xavier Vignon Lirac
+          </h2>
+        </div>
+      </section>
+
+      <section class="col-span-4 relative hover:scale-105 transition duration-300 ease-in-out">
+        <div class="relative w-full h-[28rem]">
+          <img src="/tidligere_2.webp" alt="Torrione Petrolo" class="w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-neutral-950 bg-opacity-35"></div>
+          <h2 class="absolute bottom-0 left-0 right-0 text-center p-4 md:text-h3-desktop text-h3-mobile font-display font-bold">Torrione Petrolo</h2>
+        </div>
+      </section>
+
+      <section class="col-span-4 relative hover:scale-105 transition duration-300 ease-in-out">
+        <div class="relative w-full h-[28rem]">
+          <img src="/tidligere_3.webp" alt="Nebla Verdejo" class="w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-neutral-950 bg-opacity-35"></div>
+          <h2 class="absolute bottom-0 left-0 right-0 text-center p-4 md:text-h3-desktop text-h3-mobile font-display font-bold">Nebla Verdejo</h2>
+        </div>
+      </section>
+    </section>
+  </section>
+
+  <script>
+    import { inView, animate } from "motion";
+    /* inView Animation */
+    const elementmedanimation1 = document.querySelector("#section1");
+    inView(elementmedanimation1, () => {
+      elementmedanimation1.classList.add("animate__animated", "animate__fadeInDown");
+    });
+  </script>
+</MainLayout>

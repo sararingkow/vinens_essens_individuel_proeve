@@ -1,0 +1,254 @@
+---
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+import Infografik from "../components/Infografik.astro";
+---
+
+<!-- Start-sektion -->
+<MainLayout
+  title="Forside - Vinens Essens"
+  ogtitle="Vinens Essens"
+  description="Forsiden af Vinens Essens"
+  ogdescription="Forsiden til virksomheden Vinens Essens"
+>
+  <div class="main-section overflow-hidden">
+    <div class="relative">
+      <!-- Dark filter overlay -->
+      <div class="absolute inset-0 bg-neutral-950 bg-opacity-35 backdrop-blur-sm z-10"></div>
+
+      <!-- Overlay -->
+      <div class="hidden md:block absolute inset-0 bg-neutral-950 bg-opacity-60 z-10 w-[50%]"></div>
+
+      <!-- Background Image -->
+      <img class="w-full h-screen object-cover" src="/forsidebillede.webp" alt="Baggrundsbillede af en vinkælder" loading="lazy" />
+
+      <!-- Content -->
+      <div class="absolute inset-0 max-w-7xl mx-auto md:px-0 px-8 z-20 md:pt-[13.5rem] pt-desktop-top">
+        <div class="grid md:grid-cols-12 gap-gap">
+          <!-- Text Content -->
+          <div class="md:col-span-8 content-center md:order-none order-2">
+            <h1 class="md:text-h1-desktop text-h2-mobile pb-4 uppercase text-center md:text-left">Oplev VINENS ESSENS hver måned</h1>
+            <p class="text-neutral-200 font-regular pb-10 text-center md:text-left">
+              Oplev 3 til 6 håndplukkede, eksklusive vine og nye smagsoplevelser
+            </p>
+            <div class="flex md:justify-start justify-center">
+              <a href="/formular_vinkasse" aria-label="Bestil abonnement på vin">
+                <Button variant="secondary" size="small">Bestil abonnement</Button>
+              </a>
+            </div>
+          </div>
+
+          <!-- Decorative Rotating Wine GIF -->
+          <div class="md:col-span-2 lg:col-start-10 flex items-center justify-center md:order-none order-1">
+            <img class="md:h-[32rem] h-56" src="/wine-rotation.webp" alt="Dekorativ rødvin" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Down Icon -->
+    <div class="absolute bottom-[3%] md:bottom-[2.5%] w-full flex justify-center z-[30]">
+      <a href="#section1">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="float w-8 h-8 sm:w-10 sm:h-10 text-neutral-50 hover:text-red-800 transition duration-300 ease-in-out"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <section
+    class="flex flex-col justify-center items-center md:grid md:grid-cols-12 gap-gap pb-mobil-bottom md:pb-desktop-bottom pt-mobil-top md:pt-desktop-top"
+  >
+    <!-- Første sektion -->
+    <section id="section1" class="md:p-0 p-8 grid md:grid-cols-2 grid-cols-1 col-span-10 md:col-start-2">
+      <!-- Responsive Image -->
+      <div class="w-full h-64 md:h-auto">
+        <img class="w-full h-full object-cover" src="/forsidebillede2.webp" alt="Vin oplevelse" />
+      </div>
+
+      <!-- Content -->
+      <div class="mx-auto bg-neutral-800 max-w-7xl md:p-12 p-8 grid content-center">
+        <h2 class="text-h2-mobile font-display">Tag på en vinoplevelse</h2>
+        <p class="pt-4 pb-6 text-left">
+          Hos Vinens Essens finder du et nøje udvalgt sortiment af vine, der rummer både overraskelser og velkendte favoritter. Som en del af vores
+          koncept tilbyder vi et månedligt abonnement, vi udvælger vine til dig&mdash; uden at afsløre, hvad du får, så hver levering føles som en
+          spændende overraskelse. Flere af vores vine kan endda kun nydes på udvalgte, eksklusive restauranter, hvor kvalitet og passion for vin går
+          hånd i hånd.
+        </p>
+      </div>
+    </section>
+
+    <!-- Infografik Section -->
+    <section class="max-w-7xl mx-auto md:p-0 p-8 col-span-12 flex flex-wrap justify-center gap-8 md:pt-desktop-top pt-mobil-top">
+      <Infografik />
+    </section>
+
+    <!-- Eksklusive vine Section -->
+    <section class="z-10 flex-shrink-0 col-span-10 flex justify-center items-center">
+      <!-- Wrapper for content -->
+      <div class="relative flex flex-col md:flex-row w-full">
+        <!-- Image Section -->
+        <div id="imageSection" class="hidden md:block flex-shrink-0 pl-0 md:pl-32 z-[30] mb-6 md:mb-0">
+          <img
+            class="w-full max-w-[220px] mx-auto drop-shadow-xl"
+            src="/twowinebottles.webp"
+            alt="To vin-flasker ved siden af hinanden"
+            loading="lazy"
+          />
+        </div>
+
+        <!-- Red Box (Background) -->
+        <div
+          class="redBox absolute z-0 bg-red-800 sm:w-[90%] w-full md:h-[320px] h-[400px] top-[0%] left-0 md:top-[20%] md:left-0 -translate-x-1/2 -translate-y-1/2 clip-path-custom"
+        >
+        </div>
+
+        <!-- Text Section -->
+        <div class="p-8 redBoxText text-center md:text-left relative z-10 md:py-[9rem] md:px-[4rem] pb-10 w-full max-w-screen-md">
+          <h3 class="mt-8 md:mt-0 font-display text-xl md:text-3xl">Eksklusive vine</h3>
+          <p class="mt-4 leading-relaxed break-words">
+            Vinens Essens tilbyder nøje udvalgte vine, der kombinerer høj kvalitet og unikke smagsoplevelser. Flere af vores vine findes kun i
+            udvalgte restauranter eller er anbefalet af vores loyale kunder – perfekt til at gøre enhver anledning ekstraordinær.
+          </p>
+          <a href="/formular_vinkasse" class="inline-block mt-6">
+            <Button variant="primary" size="small">Bestil abonnement</Button>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Anmeldelser Section -->
+    <section class="max-w-7xl mx-auto md:p-0 p-8 col-span-12 py-12 pb-mobil-bottom md:pb-desktop-bottom pt-mobil-top md:pt-desktop-top">
+      <h3 class="text-center font-display md:mt-0 mt-2">Anmeldelser</h3>
+      <hr class="border-t-2 border-red-800 w-32 mx-auto mt-2" />
+      <div class="flex md:flex-row flex-col justify-center gap-12 pt-8 md:pt-12">
+        <div class="text-center hover:scale-105 transition duration-300 ease-in-out">
+          <img class="max-w-[170px] max-h-[170px] mx-auto" src="/stjerner2.svg" alt="Anmeldelsestjerner - fuldt antal" loading="lazy" />
+          <h3 class="text-h2-mobile font-display mt-4 pb-3">God vin</h3>
+          <p>Fantastisk vin! Smagen er unik, og kvaliteten er altid i top.</p>
+          <p class="text-neutral-300 mt-4">- Lærke Berge</p>
+        </div>
+        <div class="text-center hover:scale-105 transition duration-300 ease-in-out">
+          <img class="max-w-[170px] max-h-[170px] mx-auto" src="/stjerner3.svg" alt="Anmeldelsestjerner - 1 ud af 5 udfyldt" loading="lazy" />
+          <h3 class="text-h2-mobile font-display mt-4 pb-3">Kan anbefales</h3>
+          <p>En fornøjelse hver gang. Perfekt til både hverdag og særlige anledninger.</p>
+          <p class="text-neutral-300 mt-4">- Mikkel Damsgaard</p>
+        </div>
+        <div class="text-center hover:scale-105 transition duration-300 ease-in-out">
+          <img class="max-w-[170px] max-h-[170px] mx-auto" src="/stjerner2.svg" alt="Anmeldelsestjerner - fuldt antal" loading="lazy" />
+          <h3 class="text-h2-mobile font-display mt-4 pb-3">Vilde udvalg</h3>
+          <p>Eksklusiv vin med en dybde, der gør enhver middag uforglemmelig.</p>
+          <p class="text-neutral-300 mt-4">- Noah Carter</p>
+        </div>
+
+        <div class="text-center hover:scale-105 transition duration-300 ease-in-out">
+          <img class="max-w-[170px] max-h-[170px] mx-auto" src="/stjerner.svg" alt="Anmeldelsestjerner - 4,5 ud af 5 udfyldt" loading="lazy" />
+          <h3 class="text-h2-mobile font-display mt-4 pb-3">Professionelle</h3>
+          <p>Service i verdensklasse&mdash; de gør alt for at sikre en god oplevelse.</p>
+          <p class="text-neutral-300 mt-4">- Natasja Daglemør</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Se mere Section -->
+    <section class="mangeelementerinview max-w-7xl mx-auto md:p-0 p-8 col-span-12 py-12">
+      <div class="grid md:grid-cols-3 grid-cols-1 gap-gap">
+        <img
+          class="mangeelementer1 md:h-[500px] w-full"
+          src="/seemore1.png"
+          alt="Adskillige vinflasker på række, placeret på en reol"
+          loading="lazy"
+        />
+        <div class="mangeelementer2 bg-neutral-800 text-white py-12 px-20 flex flex-col justify-center">
+          <h3 class="font-display text-center pb-3">Se nærmere på vores udvalg af vinkasser</h3>
+          <div class="flex justify-center">
+            <a href="/listeview" class="inline-block mt-6">
+              <Button variant="secondary" size="small">Se vinkasser</Button>
+            </a>
+          </div>
+        </div>
+        <img
+          class="mangeelementer3 md:h-[500px] w-full"
+          src="/seemore2.png"
+          alt="En vinflaske ligget lænt op ad et lille stykke træ"
+          loading="lazy"
+        />
+      </div>
+      <div class="flex justify-center">
+        <hr class="my-12 border-t-2 border-red-800 w-28" />
+      </div>
+    </section>
+  </section>
+
+  <style>
+    .clip-path-custom {
+      clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+    }
+
+    /* Floating Animation */
+    @keyframes float {
+      0% {
+        transform: translatey(0);
+      }
+      50% {
+        transform: translatey(-10px);
+      }
+      100% {
+        transform: translatey(0);
+      }
+    }
+
+    .float {
+      animation: float 3s ease-in-out infinite;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+
+  <script>
+    import { inView, animate } from "motion";
+    /* inView Animation */
+    const elementmedanimation1 = document.querySelector("#section1");
+    inView(elementmedanimation1, () => {
+      elementmedanimation1.classList.add("animate__animated", "animate__fadeInDown");
+    });
+
+    const elementmedanimation2 = document.querySelector(".redBox");
+    inView(elementmedanimation2, () => {
+      elementmedanimation2.classList.add("animate__animated", "animate__slideInLeft");
+    });
+
+    const elementmedanimation4 = document.querySelector(".redBoxText");
+    inView(elementmedanimation4, () => {
+      elementmedanimation4.classList.add("animate__animated", "animate__fadeInLeft");
+    });
+
+    const elementmedanimation3 = document.querySelector("#imageSection");
+    inView(elementmedanimation3, () => {
+      elementmedanimation3.classList.add("animate__animated", "animate__slideInRight");
+    });
+
+    /* Mange elementer der animerer ind */
+    inView(".mangeelementerinview", () => {
+      animate(".mangeelementer1", { x: [-2000, 0], y: [-50, 0] }, { duration: 1 });
+      animate(".mangeelementer2", { x: [-1500, 0], y: [-100, 0] }, { duration: 3 });
+      animate(".mangeelementer3", { x: [-1000, 0], y: [-150, 0] }, { duration: 3 });
+
+      return () => {
+        animate(".mangeelementer1", { x: [-2000, 0], y: [-50, 0] }, { duration: 1 });
+        animate(".mangeelementer2", { x: [-1500, 0], y: [-100, 0] }, { duration: 3 });
+        animate(".mangeelementer3", { x: [-1000, 0], y: [-150, 0] }, { duration: 3 });
+      };
+    });
+  </script>
+</MainLayout>

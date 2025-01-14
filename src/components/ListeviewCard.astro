@@ -1,0 +1,52 @@
+---
+export interface CardProps {
+  image: string;
+  label: string;
+  title: string;
+  description: string;
+  price: string;
+  buttonText: string;
+  second_description: string; // Optional prop for the additional label
+}
+
+import Button from "../components/Button.astro";
+const { image, label, title, description, price, buttonText, extralabel, second_description } = Astro.props;
+---
+
+<div
+  class="max-w-full sm:max-w-[410px] h-full bg-neutral-900 rounded-none h-xs col-span-4 transform transition-all duration-300 ease-in-out hover:scale-[1.02]"
+>
+  <a href="/singleview">
+    <div class="image relative">
+      <img class="w-full h-[250px] object-cover sm:w-[410px]" src={image} alt={title} />
+      <div class="h-full absolute inset-0 bg-neutral-950 bg-opacity-35 z-[20]"></div>
+    </div>
+    <!-- Labels Container (relative positioning) -->
+    <div class="relative flex flex-col justify-center items-center z-[30]">
+      <!-- Label 1 -->
+      <span class="flex flex-row justify-evenly gap-3 items-center absolute bottom-4 right-0 text-neutral-950 bg-neutral-100 p-2 w-24">
+        {label}
+        <img src="/flaske_icon_red.svg" alt="bottle icon" width="12" height="12" />
+      </span>
+
+      <!-- Label 2 (Only on Card with Position 1) -->
+      {extralabel && <span class="font-semibold absolute left-0 p-2 text-center w-40 bg-red-800 text-neutral-50 -top-[15rem]">{extralabel}</span>}
+    </div>
+    <!-- Content -->
+    <div class="p-5">
+      <h3 class="mb-2 text-lg sm:text-xl tracking-tight text-neutral-50">{title}</h3>
+      <p class="mb-12 text-[16px] md:text-[18px] lg:text-base text-neutral-50">{description}</p>
+      <div class="flex justify-between">
+        <p class="mb-1 text-[14px] md:text-[16px] lg:text-base text-neutral-300">{second_description}</p>
+        <h4 class="text-[20px] md:text-[22px] lg:text-base text-neutral-50">{price}</h4>
+        <div class="flex justify-center">
+          <a class="pt-4" href="/singleview">
+            <Button variant="primary" size="small" class="w-full sm:w-auto px-6 py-3 text-sm sm:text-base md:text-lg">
+              {buttonText}
+            </Button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>

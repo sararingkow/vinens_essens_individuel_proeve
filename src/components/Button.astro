@@ -1,0 +1,18 @@
+---
+const { variant = "primary", size = "medium" } = Astro.props;
+
+const buttonStyling = "cursor-pointer shadow-drop25 px-6 p-2 transition duration-300 ease-in-out";
+
+const variantClasses = {
+  primary: "bg-transparent font-semibold border-3 border-neutral-50 hover:bg-red-900 hover:border-red-900 text-neutral-50",
+  secondary: "bg-red-800 hover:bg-red-900 text-neutral-50",
+};
+
+const sizeClasses = {
+  large: "text-[1.25rem]",
+  medium: "text-[1.125rem]",
+  small: "text-[1rem]",
+};
+---
+
+<button class:list={[buttonStyling, variantClasses[variant], sizeClasses[size]]}><slot button /></button>

@@ -1,0 +1,263 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+---
+
+<MainLayout
+  title="Formular - Leveringsmetoder"
+  ogtitle="Leveringsmetoder - Vinens Essens"
+  description="Leveringsmetoder-siden til Vinens Essens"
+  ogdescription="Leveringsmetoder-siden til virksomheden Vinens Essens"
+>
+  <section class="max-w-7xl mx-auto md:p-0 p-8">
+    <section class="md:pt-desktop-top pt-mobil-top md:pb-desktop-bottom pb-mobil-bottom">
+      <section class="grid md:grid-cols-12 gap-gap">
+        <section class="bg-neutral-900 col-span-8 md:col-start-3">
+          <section class="grid grid-cols-6">
+            <span class="bg-red-800 h-3"></span>
+            <span class="bg-red-800 h-3"></span>
+            <span class="bg-red-800 h-3"></span>
+            <span class="bg-red-800 h-3"></span>
+            <span class="bg-neutral-50 h-3"></span>
+            <span class="bg-neutral-50 h-3"></span>
+          </section>
+          <section class="md:p-12 p-8">
+            <h1 class="md:text-h3-desktop text-h3-mobile font-display font-bold pb-10">
+              <a class="pr-3 inline align-top" href="/formular_oplysninger"><img class="h-6 inline" src="/tilbage.svg" alt="Tilbageknap" /></a
+              >Levering
+            </h1>
+
+            <!------------------------------- Tabbed interface ------------------------------->
+            <section class="col-span-6 col-start-2">
+              <div class="tab-section bg-neutral-50">
+                <div class="flex flex-wrap">
+                  <button class="bg-neutral-50 hover:bg-neutral-200 p-3 text-neutral-50 flex-grow" data-tab-target="#tab1"
+                    >Afhentning i pakkeshop</button
+                  >
+                  <button class="bg-neutral-50 hover:bg-neutral-200 p-3 text-neutral-950 flex-grow" data-tab-target="#tab2">Levering til døren</button
+                  >
+                </div>
+                <div id="tab1" class="tab-content">
+                  <!------ Sektion 1 ------>
+                  <section class="has-[:checked]:border-red-800 has-[:checked]:border-3 p-8 grid grid-cols-6 gap-gap radiocontainer">
+                    <div class="col-span-1 col-start-1 content-center pr-5">
+                      <div class="flex items-center">
+                        <input
+                          id="default-radio-1"
+                          checked="checked"
+                          type="radio"
+                          value=""
+                          name="default-radio"
+                          class="md:w-5 md:h-5 w-6 h-6 bg-neutral-200 focus:ring-red-800 focus:ring-2 border-none"
+                        />
+                      </div>
+                    </div>
+                    <div class="md:col-span-3 col-span-5 col-start-2 content-center">
+                      <p class="text-neutral-950 font-bold">Pakkeboks 3828 Superbrugsen</p>
+                      <p class="text-neutral-950 font-regular">Nørrebrogade 53A,</p>
+                      <p class="text-neutral-950 font-regular">2200 København N</p>
+                      <p class="text-neutral-950 font-bold">0,13 km</p>
+                    </div>
+                    <div class="content-center md:col-span-1 col-span-3 md:col-start-5 col-start-2 pt-5">
+                      <img class="" src="/postnord.svg" alt="postnord logo" />
+                    </div>
+                    <p class="text-neutral-950 md:col-span-1 md:col-start-6 col-start-5 content-center pt-5 font-regular">Gratis</p>
+                  </section>
+                  <section class="flex justify-center">
+                    <hr class="border-t-2 border-red-800 w-[80%]" />
+                  </section>
+
+                  <!------ Sektion 2 ------>
+                  <section class="has-[:checked]:border-red-800 has-[:checked]:border-3 p-8 grid grid-cols-6 gap-gap radiocontainer">
+                    <div class="col-span-1 col-start-1 content-center pr-5">
+                      <div class="flex items-center">
+                        <input
+                          id="default-radio-1"
+                          type="radio"
+                          value=""
+                          name="default-radio"
+                          class="md:w-5 md:h-5 w-6 h-6 bg-neutral-200 focus:ring-red-800 focus:ring-2 border-none"
+                        />
+                      </div>
+                    </div>
+                    <div class="md:col-span-3 col-span-5 col-start-2 content-center">
+                      <p class="text-neutral-950 font-bold">Pakkeshop Guldberg Kiosk</p>
+                      <p class="text-neutral-950 font-regular">Guldbergsgade 24,</p>
+                      <p class="text-neutral-950 font-regular">2200 København N</p>
+                      <p class="text-neutral-950 font-bold">0,23 km</p>
+                    </div>
+                    <div class="content-center md:col-span-1 col-span-3 md:col-start-5 col-start-2 pt-5">
+                      <img class="" src="/postnord.svg" alt="postnord logo" />
+                    </div>
+                    <p class="text-neutral-950 md:col-span-1 md:col-start-6 col-start-5 content-center pt-5 font-regular">Gratis</p>
+                  </section>
+                  <section class="flex justify-center">
+                    <hr class="border-t-2 border-red-800 w-[80%]" />
+                  </section>
+
+                  <!------ Sektion 3 ------>
+                  <section class="has-[:checked]:border-red-800 has-[:checked]:border-3 p-8 grid grid-cols-6 gap-gap">
+                    <div class="col-span-1 col-start-1 content-center pr-5">
+                      <div class="flex items-center">
+                        <input
+                          id="default-radio-1"
+                          type="radio"
+                          value=""
+                          name="default-radio"
+                          class="md:w-5 md:h-5 w-6 h-6 bg-neutral-200 focus:ring-red-800 focus:ring-2 border-none"
+                        />
+                      </div>
+                    </div>
+                    <div class="md:col-span-3 col-span-5 col-start-2 content-center">
+                      <p class="text-neutral-950 font-bold">Guldberg Kiosk</p>
+                      <p class="text-neutral-950 font-regular">Guldbergsgade 24,</p>
+                      <p class="text-neutral-950 font-regular">2200 København N</p>
+                      <p class="text-neutral-950 font-bold">0,26 km</p>
+                    </div>
+                    <div class="content-center md:col-span-1 col-span-3 md:col-start-5 col-start-2 pt-5">
+                      <img class="" src="/postnord.svg" alt="postnord logo" />
+                    </div>
+                    <p class="text-neutral-950 md:col-span-1 md:col-start-6 col-start-5 content-center pt-5 font-regular">Gratis</p>
+                  </section>
+                  <section class="flex justify-center">
+                    <hr class="border-t-2 border-red-800 w-[80%]" />
+                  </section>
+
+                  <!------ Sektion 4 ------>
+                  <section class="has-[:checked]:border-red-800 has-[:checked]:border-3 p-8 grid grid-cols-6 gap-gap radiocontainer">
+                    <div class="col-span-1 col-start-1 content-center pr-5">
+                      <div class="flex items-center">
+                        <input
+                          id="default-radio-1"
+                          type="radio"
+                          value=""
+                          name="default-radio"
+                          class="md:w-5 md:h-5 w-6 h-6 bg-neutral-200 focus:ring-red-800 focus:ring-2 border-none"
+                        />
+                      </div>
+                    </div>
+                    <div class="md:col-span-3 col-span-5 col-start-2 content-center">
+                      <p class="text-neutral-950 font-bold">Pakkeshop Kiosk Runddelen</p>
+                      <p class="text-neutral-950 font-regular">Nørrebrogade 104,</p>
+                      <p class="text-neutral-950 font-regular">2200 København N</p>
+                      <p class="text-neutral-950 font-bold">0,45 km</p>
+                    </div>
+                    <div class="content-center md:col-span-1 col-span-3 md:col-start-5 col-start-2 pt-5">
+                      <img class="" src="/postnord.svg" alt="postnord logo" />
+                    </div>
+                    <p class="text-neutral-950 md:col-span-1 md:col-start-6 col-start-5 content-center pt-5 font-regular">Gratis</p>
+                  </section>
+                </div>
+
+                <div id="tab2" class="tab-content hidden">
+                  <!------ Sektion 1 ------>
+                  <section class="has-[:checked]:border-red-800 has-[:checked]:border-3 p-8 grid grid-cols-6 gap-gap">
+                    <div class="col-span-1 col-start-1 content-center pr-5">
+                      <div class="flex items-center">
+                        <input
+                          id="default-radio-1"
+                          checked="checked"
+                          type="radio"
+                          value=""
+                          name="default-radio"
+                          class="md:w-5 md:h-5 w-6 h-6 bg-neutral-200 focus:ring-red-800 focus:ring-2 border-none"
+                        />
+                      </div>
+                    </div>
+                    <div class="md:col-span-3 col-span-5 col-start-2 content-center">
+                      <p class="text-neutral-950 font-bold">Pakke til døren</p>
+                      <p class="text-neutral-950 font-regular">Leveres i dagtimerne</p>
+                    </div>
+                    <div class="content-center md:col-span-1 col-span-3 md:col-start-5 col-start-2 pt-5">
+                      <img class="" src="/postnord.svg" alt="postnord logo" />
+                    </div>
+                    <p class="text-neutral-950 md:col-span-1 md:col-start-6 col-start-5 content-center pt-5 font-regular">Gratis</p>
+                  </section>
+
+                  <!------ Sektion 2 ------>
+                  <section class="has-[:checked]:border-red-800 has-[:checked]:border-3 p-8 grid grid-cols-6 gap-gap">
+                    <div class="col-span-1 col-start-1 content-center pr-5">
+                      <div class="flex items-center">
+                        <input
+                          id="default-radio-1"
+                          type="radio"
+                          value=""
+                          name="default-radio"
+                          class="md:w-5 md:h-5 w-6 h-6 bg-neutral-200 focus:ring-red-800 focus:ring-2 border-none"
+                        />
+                      </div>
+                    </div>
+                    <div class="md:col-span-3 col-span-5 col-start-2 content-center">
+                      <p class="text-neutral-950 font-bold">Pakke til døren (Aftenlevering)</p>
+                      <p class="text-neutral-950 font-regular">Pakken leveres mellem kl. 18 - 22</p>
+                    </div>
+                    <div class="content-center md:col-span-1 col-span-3 md:col-start-5 col-start-2 pt-5">
+                      <img class="" src="/postnord.svg" alt="postnord logo" />
+                    </div>
+                    <p class="text-neutral-950 md:col-span-1 md:col-start-6 col-start-5 content-center pt-5 font-regular">Gratis</p>
+                  </section>
+                </div>
+              </div>
+            </section>
+            <div class="flex justify-center pt-10">
+              <a href="/formular_mitid">
+                <Button variant="primary" size="small">Fortsæt</Button>
+              </a>
+            </div>
+          </section>
+        </section>
+      </section>
+      <section class="pt-10 flex justify-center">
+        <hr class="border-t-2 border-red-800 w-28" />
+      </section>
+    </section>
+  </section>
+
+  <!------------------------------- Tabbed interface ------------------------------->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const tabs = document.querySelectorAll("[data-tab-target]");
+      const activeClass = "bg-red-800 hover:bg-red-900 text-neutral-50";
+      const inactiveClass = "bg-neutral-50 hover:bg-neutral-200 text-neutral-950";
+
+      // Select first tab by default
+      tabs[0].classList.add(...activeClass.split(" "));
+      document.querySelector("#tab1").classList.remove("hidden");
+
+      // Mark the first radio button in the first tab as checked by default
+      document.querySelector("#tab1 input[type='radio']").checked = true;
+
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          const targetContent = document.querySelector(tab.dataset.tabTarget);
+
+          // Hide all tab contents
+          document.querySelectorAll(".tab-content").forEach((content) => content.classList.add("hidden"));
+          // Show the target tab content
+          targetContent.classList.remove("hidden");
+
+          // Remove active class from all tabs
+          tabs.forEach((t) => {
+            t.classList.remove(...activeClass.split(" "));
+            t.classList.add(...inactiveClass.split(" "));
+          });
+
+          // Add active class to clicked tab
+          tab.classList.remove(...inactiveClass.split(" "));
+          tab.classList.add(...activeClass.split(" "));
+
+          // Mark the first radio button in the active tab as checked
+          targetContent.querySelector("input[type='radio']").checked = true;
+
+          // Uncheck all other radio buttons in the active tab
+          targetContent.querySelectorAll("input[type='radio']").forEach((radio, index) => {
+            if (index !== 0) {
+              radio.checked = false;
+            }
+          });
+        });
+      });
+    });
+  </script>
+</MainLayout>

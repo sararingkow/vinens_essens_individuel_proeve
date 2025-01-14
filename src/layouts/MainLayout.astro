@@ -1,0 +1,67 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/tailwind.css";
+import "animate.css";
+const { title } = Astro.props;
+
+const schemamarkup = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  name: "Vinens Essens Subscription",
+  image: "URL_to_image",
+  description: "En månedlig vinkasse, hvor du kan opleve nøje udvalgte vine fra nogle af verdens mest anerkendte vinområder.",
+  brand: "Vinens Essens",
+  sku: "12345",
+  offers: [
+    {
+      "@type": "Offer",
+      url: "https://vinens-essens.netlify.app/",
+      priceCurrency: "DKK",
+      price: "699",
+      availability: "https://schema.org/InStock",
+    },
+    {
+      "@type": "Offer",
+      url: "https://vinens-essens.netlify.app/",
+      priceCurrency: "DKK",
+      price: "349",
+      availability: "https://schema.org/InStock",
+    },
+  ],
+};
+---
+
+<html lang="da">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={Astro.props.description} />
+    <meta property="og:locale" content="da_DK" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={Astro.props.ogtitle} />
+    <meta property="og:description" content={Astro.props.ogdescription} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>{Astro.props.title}</title>
+  </head>
+  <body>
+    <header>
+      <Header />
+    </header>
+
+    <main class="bg-neutral-950 overflow-hidden">
+      <slot />
+    </main>
+
+    <footer class="">
+      <Footer />
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,127 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+---
+
+<MainLayout
+  title="Formular - Oplysninger"
+  ogtitle="Oplysninger - Vinens Essens"
+  description="Oplysninger-siden til Vinens Essens"
+  ogdescription="Oplysninger-siden til virksomheden Vinens Essens"
+>
+  <section class="max-w-7xl mx-auto md:p-0 p-8">
+    <section class="md:pt-desktop-top pt-mobil-top md:pb-desktop-bottom pb-mobil-bottom">
+      <section class="grid md:grid-cols-12 gap-gap">
+        <section class="bg-neutral-900 col-span-8 md:col-start-3">
+          <section class="grid grid-cols-6">
+            <span class="bg-red-800 h-3"></span>
+            <span class="bg-red-800 h-3"></span>
+            <span class="bg-red-800 h-3"></span>
+            <span class="bg-neutral-50 h-3"></span>
+            <span class="bg-neutral-50 h-3"></span>
+            <span class="bg-neutral-50 h-3"></span>
+          </section>
+          <section class="md:p-12 p-8">
+            <h1 class="md:text-h3-desktop text-h3-mobile font-display font-bold pb-10">
+              <a class="pr-3 inline align-top" href="/formular_antal"><img class="h-6 inline" src="/tilbage.svg" alt="Tilbageknap" /></a>Dine
+              oplysninger
+            </h1>
+
+            <form>
+              <div class="grid md:grid-cols-2 gap-gap pb-5">
+                <div>
+                  <label class="md:p-desktop p-mobile font-lato font-light text-neutral-50" for="navn">
+                    Fornavn<span class="text-red-600">*</span>
+                  </label>
+                  <input
+                    class="block w-full bg-neutral-50 border-transparent focus:border-red-800 focus:ring-0 md:p-desktop p-mobile font-lato font-regular text-neutral-400"
+                    type="text"
+                    id="fornavn"
+                    placeholder="Sofie"
+                  />
+                </div>
+                <div>
+                  <label class="md:p-desktop p-mobile font-lato font-light text-neutral-50" for="navn">
+                    Efternavn<span class="text-red-600">*</span>
+                  </label>
+                  <input
+                    class="block w-full bg-neutral-50 border-transparent focus:border-red-800 focus:ring-0 md:p-desktop p-mobile font-lato font-regular text-neutral-400"
+                    type="text"
+                    id="efternavn"
+                    placeholder="Hansen"
+                  />
+                </div>
+              </div>
+              <div class="md:col-span-2 pb-5">
+                <label class="md:p-desktop p-mobile font-lato font-light text-neutral-50" for="mail">
+                  Mail<span class="text-red-600">*</span>
+                </label>
+                <input
+                  class="block w-full bg-neutral-50 border-transparent focus:border-red-800 focus:ring-0 md:p-desktop p-mobile font-lato font-regular text-neutral-400"
+                  type="email"
+                  id="email"
+                  placeholder="kea@kea.dk"
+                />
+              </div>
+              <div class="md:col-span-2 pb-5">
+                <label class="md:p-desktop p-mobile font-lato font-light text-neutral-50" for="Telefon nr">
+                  Telefon nr<span class="text-red-600">*</span>
+                </label>
+                <input
+                  class="block w-full bg-neutral-50 border-transparent focus:border-red-800 focus:ring-0 md:p-desktop p-mobile font-lato font-regular text-neutral-400"
+                  type="tel"
+                  id="telefon"
+                  placeholder="+45 46 46 00 00"
+                />
+              </div>
+              <div class="md:col-span-2 pb-5">
+                <label class="md:p-desktop p-mobile font-lato font-light text-neutral-50" for="Adresse">
+                  Adresse<span class="text-red-600">*</span>
+                </label>
+                <input
+                  class="block w-full bg-neutral-50 border-transparent focus:border-red-800 focus:ring-0 md:p-desktop p-mobile font-lato font-regular text-neutral-400"
+                  type="text"
+                  id="adresse"
+                  placeholder="Guldbergsgade 29N"
+                />
+              </div>
+              <div class="grid md:grid-cols-2 gap-gap pb-5">
+                <div>
+                  <label class="md:p-desktop p-mobile font-lato font-light text-neutral-50" for="Postnummer">
+                    Postnummer<span class="text-red-600">*</span>
+                  </label>
+                  <input
+                    class="block w-full bg-neutral-50 border-transparent focus:border-red-800 focus:ring-0 md:p-desktop p-mobile font-lato font-regular text-neutral-400"
+                    type="text"
+                    id="postnummer"
+                    placeholder="2200"
+                  />
+                </div>
+                <div>
+                  <label class="md:p-desktop p-mobile font-lato font-light text-neutral-50" for="By">
+                    By<span class="text-red-600">*</span>
+                  </label>
+                  <input
+                    class="block w-full bg-neutral-50 border-transparent focus:border-red-800 focus:ring-0 md:p-desktop p-mobile font-lato font-regular text-neutral-400"
+                    type="text"
+                    id="bynavn"
+                    placeholder="København N"
+                  />
+                </div>
+              </div>
+            </form>
+            <div class="flex justify-center pt-10">
+              <a href="/formular_levering">
+                <Button variant="primary" size="small">Fortsæt</Button>
+              </a>
+            </div>
+          </section>
+        </section>
+      </section>
+      <section class="pt-10 flex justify-center">
+        <hr class="border-t-2 border-red-800 w-28" />
+      </section>
+    </section>
+  </section>
+</MainLayout>

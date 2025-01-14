@@ -1,0 +1,44 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+---
+
+<MainLayout
+  title="Alder"
+  ogtitle="Alder - Vinens Essens"
+  description="Anden aldersside til Vinens Essens"
+  ogdescription="Anden aldersside til virksomheden af Vinens Essens"
+>
+  <!-- Hero section for responsive design -->
+  <div class="relative w-full h-full">
+    <!-- Background Image -->
+    <img class="w-full h-screen object-cover" src="/forsidebillede.webp" alt="Hero background" />
+
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-neutral-950 bg-opacity-35 backdrop-blur-sm z-[20]"></div>
+
+    <!-- Indhold-->
+    <section class="absolute inset-0 z-[30] flex items-center justify-center">
+      <section class="max-w-7xl mx-auto lg:p-0 p-8">
+        <section class="lg:pt-desktop-top pt-mobil-top lg:pb-desktop-bottom pb-mobil-bottom">
+          <section class="grid lg:grid-cols-12 gap-4">
+            <section class="bg-neutral-900 col-span-8 lg:col-start-3 p-8 flex justify-center items-center">
+              <section class="pb-mobil-bottom pt-mobil-top lg:px-20 w-full max-w-md h-full">
+                <div class="grid place-items-center">
+                  <h1 class="lg:text-h3-desktop text-h3-mobile font-display font-bold pb-10 text-center">Vend tilbage når du er 18 år</h1>
+                  <p class="text-center font-regular text-neutral-400">Klikkede du forkert?</p>
+                </div>
+                <div class="flex justify-center gap-gap pt-5">
+                  <a href="/alder">
+                    <Button variant="secondary" size="small">Gå tilbage</Button>
+                  </a>
+                </div>
+              </section>
+            </section>
+          </section>
+        </section>
+      </section>
+    </section>
+  </div>
+</MainLayout>

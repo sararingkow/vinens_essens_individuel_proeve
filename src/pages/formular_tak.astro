@@ -1,0 +1,45 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+---
+
+<MainLayout
+  title="Formular - Tak for din tilmeldning"
+  ogtitle="Tak for din tilmeldning - Vinens Essens"
+  description="Tak-siden til Vinens Essens"
+  ogdescription="Tak-siden til virksomheden Vinens Essens"
+>
+  <section class="max-w-7xl mx-auto md:p-0 p-8">
+    <section class="lg:pt-desktop-top pt-mobil-top lg:pb-desktop-bottom pb-mobil-bottom">
+      <section class="grid lg:grid-cols-12 gap-4">
+        <section class="bg-neutral-900 col-span-8 lg:col-start-3">
+          <section class="lg:p-12 p-8 lg:pb-desktop-bottom lg:pt-desktop-top pb-mobil-bottom pt-mobil-top">
+            <div class="grid place-items-center">
+              <h1 id="Tak" class="lg:text-h3-desktop text-h3-mobile font-display font-bold pb-5 text-center">Tak for din tilmeldning</h1>
+              <p class="text-center">Ordrebekræftelsen er sendt til din email</p>
+            </div>
+            <div class="flex justify-center pt-20">
+              <a href="/">
+                <Button variant="primary" size="small">Tilbage til forsiden</Button>
+              </a>
+            </div>
+          </section>
+        </section>
+      </section>
+      <section class="pt-10 flex justify-center">
+        <hr class="border-t-2 border-red-800 w-28" />
+      </section>
+    </section>
+  </section>
+
+  <script>
+    import { inView, animate } from "motion";
+
+    /* inView Animations */
+    const elementmedanimation1 = document.querySelector("#Tak");
+    inView(elementmedanimation1, () => {
+      elementmedanimation1.classList.add("animate__animated", "animate__bounceIn");
+    });
+  </script>
+</MainLayout>
